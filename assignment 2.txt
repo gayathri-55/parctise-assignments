@@ -1,0 +1,89 @@
+1.Run a script and demonstrate adding two integers and convert them into hexadecimal?
+$a=10
+$b=20
+$c=$a + $b
+30
+To convert an interger to hexadecimal the command used in powershell is 0x
+for example: ps> 0xae
+             174
+             ps> 0x30
+             48
+
+2.Run a script and demonstrate ifelse if condition?
+$choco="diarymilk"
+$choco1="kitkat"
+if($choco -eq"dairymilk") {"I love choco"} elseif($choco="kitkat") {"I hate choco"}
+I love choco
+It checks the if condition if that condition is true it will print i love choco otherwise it will go to elseif and prints i hate choco.
+if the if condition is true then it will not go to the else if part.
+
+3.Run a script and demonstrate about get-commands, get-update, get-unique, get-date and get-alias?
+get-command : this will display all the commands that are used in the powershell with the commandtype and name of the command.
+get-date : it displays the current date and time.
+get-process : it displays all the processess that are running on the system.
+get-alias : it displays all the alias names for the commands that we use in powershell.
+write-host : it is used to display whatever we right next to the command write-host.
+
+
+PYTHON:
+
+1.Work on different variables in python?
+we can declare and define different variables in python but those variables have some rules and conditions, they are:
+.A variable name can start with any alphabet that may of lowercase or uppercase.
+.A variable name can start with an underscore or can end with an underscore.
+.A variable name cannot start with an integer or any number.
+.It can be of alphanumeric name.
+
+2.Work on string concatination?
+String concatination is adding or combining two strings.
+In python we can concate the strings as follows:
+string1="gayathri"
+string2="nusimala"
+print(string1+string2)
+gayathrinusimala
+but it is not possible to add a string and an integer if we do so we will get an error.
+ 
+3.write a program of simple calculator using dynamic input?
+operation=input(select operator: + for addition, - for subtraction, * for multiplication, / for division)
+num1=input("enter the num1")
+num2=input(:enter the num2")
+if operator=='+':
+print(num1+num2)
+elif operator=='-':
+print(num1-num2)
+elif operator=='*':
+print(num1*num2)
+elif operator=='/':
+print(num1/num2)
+else:
+print("invalid")
+
+output:
++
+2
+3
+5
+
+4.Find the type of available datatypes in python?
+The datatypes in python are
+interger, float, bool, complex, string
+To find the type of datatype in pythonwe have to write
+type()
+for example:  a="gayathri"
+	      print(type(a))
+	      output: string.
+
+5.Functions in python?
+A function in python is a group of related statements that perform a specific task.We can pass parameters as data intothe function.
+syntax: def function_name(parameters):
+            """"docstring""""""
+               statements(s)
+
+6.String functions?
+We have many string functions in python.
+some of the functions used in python are:
+capitalize() - converts the first character to uppercase.
+casefold() - converts the string into lowercase.
+center() - -returns the centered string.
+count() - returns the number of times a specific character is occured.
+replace() - replace the specific string with another.
