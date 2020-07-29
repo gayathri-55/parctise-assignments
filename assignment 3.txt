@@ -1,0 +1,101 @@
+1.Work on assignment operator in python?
+Assignment operators are used to assign the values of right operand to the left operand.
+various assignment operators are:
++=, -=, /=, *=, **=, //=, !=, ^=, >>=, <<=.
+eg: a=10	
+    b=20	
+    a+=b
+    print(a)
+output:30
+
+2.work on comparision operators?
+Comparision operators compares the both operands and determines the relation between them.
+It is also know as relational operator.
+Some of the comparision operators are:
+==,!=,<=,>=
+eg: s=5
+    g=9
+    if(s>=g):
+       print("s is big")
+    elif(s==g):
+       print("both are equal")
+    elif(s!=g):
+       print("both are not equal")
+    else:
+       print("g is big")
+output: both are not equal.
+
+3.work on bitwise operators?
+Bitwise operators perform operation on binary pattern.
+Some of the bitwise operators are:
+&,|,^,<<,>>,~.
+eg: x=2
+    y=1
+    print(x&y)
+    print(x|y)
+    print(x^y)
+    print(x<<y)
+    print(x>>y)
+output:0
+       3
+       3 
+       4
+       1
+
+4.work on tuples and dictionary?
+A tuple is a collection which is ordered and unchangable.
+It is represented as tuple()
+eg:mad=("doll","bat","ball")
+   print(mad)
+   print(mad[2])
+output:("doll","bat","ball")
+        bat
+We have many operations to perform on tuples like finding lenght,negative indexing, etc..
+But we cannot add or change the values of the tuples.
+
+A dictionary is an unordered, changable and indexed.
+Its is represented with the curly braces{}
+eg:birds={"name":"parrot",
+          "color":"green"}
+   print(birds["color"])
+   birds["color"]="white"
+   print(birds["color"])
+output:green
+       white
+
+5.Methods
+seed()-used in generating random numbers
+syntax:seed([x])
+getstate-usedto capture the state and return the object of the random number generated with current state.
+syntax:random.getstate()
+randint()-used to generate a random number and return an integer number from the specific range.
+syntax:random.randint()
+randrange-used to return the selected element from the specific range.
+syntax:random.randrange(start,stop,step)
+choices()-used to return a random selected item of the list from the specified range of list or tuple or the other.
+syntaxrandom.choices(sequence,weights=none,cum_weights=none,k=1)
+shuffle()-used to randomize or shuffle the sequence of lists or tuple or other.
+syntax:random.shuffle(sequence,function)
+choice()-used to return the random sequence element from the list or tuple.
+syntax:random.choice(sequence)
+triangular()-used to return the random floating number from the two specified numbers you can also specify the third parameter.
+syntax:random.triangle(low,high,mode)
+uniform()- used to return a random float number from the two specified numbers
+syntax:random.uniform(a,b)
+
+6.write a python program to print prime numbers without using loops?
+def prime_number(n, d):
+    if n//2 < d:
+     print("True")
+    if n%d == 0:
+      print("False")
+    print(prime_number(n, d+1))
+
+def find_primes(n,i, result):
+  if i == n + 1:
+    print(result)
+  if prime_number(i, 2):
+    result.append(i)
+  print(find_primes(n, i+1, result))
+print(find_primes(20,2, []))
+output:[2,3,5,7,11,13,17,19]	  
