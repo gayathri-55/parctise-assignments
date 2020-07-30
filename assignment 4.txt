@@ -1,0 +1,403 @@
+#arithmetic operators
+
+let "a=2+2"
+echo "a=$a"
+output: a=4
+
+let "a=2-2"
+echo "a=$a"
+output: a=0
+
+let "a=2*2"
+echo "a=$a"
+output: a=4
+
+let "a=2/2"
+echo "a=$a"
+output: a=1
+
+#pre increment operator
+
+i=30
+echo "preincrement:" $((++i +20))
+echo "preincremnent:" $((++i))
+output: preincrement: 51
+        preincremnent: 32
+
+#post increment operator
+
+y=40
+echo "postincrement:" $((y++ +10))
+echo "postincrement:" $((y++-20))
+echo $(($y))
+output: postincrement: 50
+        postincrement: 21
+        42
+
+#pre decrement operator
+
+x=10
+echo "predecrement:" $((--x))
+echo $(($x))
+output: predecrement: 9
+        9
+
+#post decrement operator
+
+n=10
+echo "postdecrement:" $((x--))
+echo $(($x))
+output: postdecrement: 9
+        8
+
+#logical operators
+
+x=cat
+y=dog
+if [[ $x = "dog" && $y = "cat" ]]
+then
+    echo "false"
+else
+    echo "true"
+fi
+output: true
+
+#relation operator
+
+c=60
+if [ $c -eq 20 ]
+then
+    echo "equals"
+else
+    echo "not equals"
+fi
+output : not equals
+
+c=20
+if [ $c -ne 20 ]
+then
+    echo "not equals"
+else
+    echo "equals"
+fi
+output: equals
+
+c=70
+if [ $c -gt 30 ]
+then
+    echo "greater"
+else
+    echo "not greater"
+fi
+output: greater
+
+c=80
+if [ $c -ge 80 ]
+then
+    echo "equals"
+else
+    echo "not equals"
+fi
+output: equals
+
+c=60
+if [ $c -lt 20 ]
+then
+    echo "less than 20"
+else
+    echo "not less than 20"
+fi
+output: not less than 20
+
+c=60
+if [ $c -le 80 ]
+then
+    echo "lesser"
+else
+    echo "not lesser"
+fi
+output: lesser
+
+#integer operators
+
+c=60
+if [[ $c < 20 ]]
+then
+    echo "yes"
+else
+    echo "not "
+fi
+output: not
+
+c=60
+if (( $c <= 60 ))
+then
+    echo "yes"
+else
+    echo "not "
+fi
+output: yes
+
+c=60
+if (( $c > 40 ))
+then
+    echo "yes"
+else
+    echo "not "
+fi
+output: yes
+
+c=60
+if (( $c >= 90 ))
+then
+    echo "yes"
+else
+    echo "not "
+fi
+output: not
+
+#string operators
+
+s="black"
+if [ $s="black" ]
+then
+    echo "true"
+else
+    echo "false"
+fi
+output: true
+
+val=100
+if [ $val==100 ]
+then
+    echo "the value is equal"
+else
+    echo "the value is not equal"
+fi
+output: the value is equal
+
+var=10
+if [ $var!=10 ]
+then
+    echo "not equal"
+else
+    echo "equal"
+fi
+output: not equal
+
+str="black"
+str1="pink"
+if [[ $str<$str1 ]]
+then
+    echo " str is less than str1 "
+else
+    echo " str is less than str1 "
+fi
+output: str is less than str1
+
+a="apple"
+b="ball"
+if [ $a>$b ]
+then
+    echo "a is greater than b"
+else
+    echo "a is less than b"
+fi
+output: a is greater than b
+
+value=""
+if [ -z $value ]
+then 
+    echo "string length is zero"
+else
+    echo "string lenght is not zero"
+fi
+output: string length is zero
+
+value="gayathri"
+if [ -n $value ]
+then 
+    echo "string length is 8"
+else
+    echo "string lenght is 0"
+fi
+output: string length is 8
+
+n=10
+m=20
+if [ $n -lt 30 -a $m -lt 10 ]
+then
+    echo "works"
+else
+    echo "not works"
+fi
+output: not works
+
+#file test operators
+
+file="C:\Users\Documents"
+if [ -r $file ]
+then
+    echo "this file is accessable to read"
+else
+    echo "no access"
+fi
+output: no access
+
+file="C:\Users\Documents"
+if [ -w $file ]
+then
+    echo "this file is accessable to read"
+else
+    echo "no access"
+fi
+output: no access
+
+file="C:\Users\Documents"
+if [ -x $file ]
+then
+    echo "this file is accessable to read"
+else
+    echo "no access"
+fi
+output: no access
+
+file="C:\Users\Documents"
+if [ -e $file ]
+then
+    echo "this file exists"
+else
+    echo "not exists"
+fi
+output: not exists
+
+file="C:\Users\Documents"
+if [ -f $file ]
+then
+    echo "this file is ordinary"
+else
+    echo "this file is special"
+fi
+output: this file is special
+
+file="C:\Users\Documents"
+if [ -d $file ]
+then
+    echo "this file is a directory"
+else
+    echo "not a directory"
+fi
+output: not a directory
+
+
+file="C:\Users\Documents"
+if [ -s $file ]
+then
+    echo "this file size is zero"
+else
+    echo "this file size is not zero"
+fi
+output: this file size is not zero
+
+#shellloops
+
+a=0
+while [ $a -lt 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+output: 0
+        1
+        2
+        3
+        4
+
+for i in 1 2 3 4 5
+do
+    sum=`expr $sum + $i`
+done
+echo $sum
+output: 15
+
+b=2
+until [ $b -le 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+output: 2
+        3
+        4
+        5
+
+num="1 2 3 4 5 6 7 8 9 10"
+for i in $num
+do
+    r=`expr $i % 2`
+    if [ $r -eq 0 ]
+    then
+        echo "even"
+    else
+        echo "odd"
+    fi
+done
+output: odd
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+even
+
+#break and continue
+
+z=0
+while [ $z -lt 10 ]
+do
+    echo $a
+    if [ $a -eq 10 ]
+    then
+        break
+    fi
+    a=`expr + $a + 1`
+done
+output:5
+6
+7
+8
+9
+10 
+
+
+#shell functions
+
+color(){
+    echo $1 $2 $3
+}
+color black white pink
+output: black white pink
+
+game(){
+    echo "i love games"
+    return 5
+}
+game
+ret=$?
+echo return $ret
+output: i love games
+return 5
+
+num(){
+    echo "digit"
+    num1(){
+        echo "number"
+    }
+    num1
+}
+num
+output: digit
+number
