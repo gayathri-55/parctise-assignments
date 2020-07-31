@@ -1,0 +1,236 @@
+1.work on DOM IN JS?
+.JavaScript can access all the elements in a webpage making use of Document Object Model (DOM).
+.Using DOM, JavaScript can perform multiple tasks. 
+.It can create new elements and attributes, change the existing elements and attributes and even remove existing elements and attributes.
+.In DOM all the html elements are objects.
+.The programming interface is the properties and methods of each object.
+.A property is a value that you can change i.e. get or set the values, changing the content of an html element.
+.Where as method is an action you can do, like add or delete.
+for example:
+we consider getElementById is the one of the DOM methods and innerHTML is the one of the DOM properties.
+Let us write one example html code to see how they work.
+
+<!DOCHTML>
+<html>
+  <head>
+     <title>
+        This is a programming session 
+     </title>
+     <p id ="code"></p>
+  </head>
+  <body>
+     <h1>Welcome!!!</h1>
+     <h2>Good Morning</h2>
+     <h3>Lets start the work</h3>
+     <script>
+        document.getElementById("code").innerHTML=2*5;
+     </script>
+   </body>
+</html>
+output: 10
+	Welcome!!!
+	Good Morning
+	Lets start the work
+
+.The most common way to access the elements is to use id of the elements.
+.In the above example we used the document.getElementById method used id="code" to find the element.
+.To get the content we used innerHTML property.
+.This is how these DOM methods and the properties.
+.Still we have many other methods and properties like
+document.getElementByTagName-used to find the html element by its tag name.
+document.getElementByClassName-used to find the html element by its class name.
+document.createElement-used to create html elements.
+document.removeChild-used to remove html elements.
+document.appendChild-used to add an html element.
+.And so many other methods we have in DOM to perform many tasks in html programs.
+.We also have some properties 
+element.attribute-used to change the attributes value of html element.
+element.style.property-used to change the style of the html element.
+.Like this we have many other properties and methods which work in the same way as show the above example.
+
+#createElement and append example
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<t id="organs">
+  <h1>ear</h1>
+  <h2>nose</h2>
+</t>
+
+<script>
+function add() {
+  var node = document.createElement("eye");
+  node.appendChild(textnode);
+  document.getElementById("organs").appendChild(node);
+}
+</script>
+
+</body>
+</html>
+
+output: before append 
+	ear
+	nose
+	after append
+	ear
+	nose
+	eye
+
+#array
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+output:Banana * Orange * Apple * Mango
+
+#conditional
+<!DOCTYPE HTML>
+<html>
+<p id="code"></p>
+<body>
+<script>  
+var a=20;  
+if(a==10){  
+document.getElementById("code").innerHTML=("a is equal to 10");  
+}  
+else if(a==15){  
+document.getElementById("code").innerHTML=("a is equal to 15");  
+}  
+else if(a==20){  
+document.getElementById("code").innerHTML=("a is equal to 20");  
+}  
+else{  
+document.getElementById("code").innerHTML=("a is not equal to 10, 15 or 20");  
+}
+</script>
+</body>
+</html>
+
+output:a is equal to 20.
+
+#forloop
+
+<!DOCTYPE HTML>
+<html>
+<p id="code"></p>
+<body>
+<script>  
+#forloop
+for (i=1; i<=5; i++)  
+{  
+document.getElementById("code").innerHTML=(i + " ")  
+}  
+</script> 
+</body> 
+</html>
+
+output:1 2 3 4 5
+
+#whileloop
+
+<!DOCTYPE html>
+<html>
+<p id="code"></p>
+<body>
+<script>  
+var i=11;  
+while (i<=15)  
+{  
+document.getElementById("code").innerHTML=(i + " ");  
+i++;  
+}  
+</script>  
+</body>
+</html>
+
+output: 11 12 13 14 15
+
+#dowhile
+
+<!DOCTYPE html>
+<html>
+<p id="code"></p>
+<body>
+<script>  
+var i=21;  
+do{  
+document.getElementById("code").innerHTML=(i + " ");  
+i++;  
+}while (i<=25);  
+</script>  
+</body>
+</html>
+ output: 21 22 23 24 25
+
+#switch
+
+<!DOCTYPE html>
+<html>
+<p id="code"></p>
+<body>
+<script>  
+var marks=100;  
+var result;  
+switch(marks){  
+case '10':  
+result=10;  
+break;  
+case '100':  
+result=100+;  
+break;  
+case '200':  
+result=200;  
+break;  
+default:  
+result=0;  
+}  
+document.getElementById("code").innerHTML=(result);  
+</script>  
+</body>
+</html>
+
+output: 100
+
+#variable
+
+<html>
+<p id="code"></p>
+<body>
+<script>  
+var x = 10;  
+var y = 20;  
+var z=x+y;  
+document.getElementById("code").innerHTML=z;  
+</script>  
+</body>
+</html>
+
+Output: 30
+
+#function
+
+<html>
+<p id="code"></p>
+<body>
+<script>  
+function getInfo(){  
+return "hello guys;  
+}  
+</script>  
+<script>  
+document.getElementById("code).innerHTML=(getInfo());  
+</script>  
+</body>
+</html>
+
+output: hello guys
+
+ 
+
+
+
+  
+
+
+       	 
