@@ -1,0 +1,87 @@
+1.NODE JS BUFFERS?
+.Node JS provides buffer class to store raw data similar to an array of interger.
+.Buffer class is used because pure javascript is not nice to binary data.
+.Buffer class is global class.
+.It can be accesed in application without using the buffer module.
+
+Creating a buffer
+.A buffer can be created or constucted in many ways, but there are three mostly used method to create a buffer
+->creating a buffer uninitiated.
+example:var buf = new Buffer(5);
+->creating a buffer from an array.
+example:var buf = new Buffer([2,3,4]);
+->creating a buffer from string.
+example:var buf = new Buffer("hello good morning");
+
+Writing a buffere
+.The method of writing into a node buffer is 
+syntax:buf.write(string[, offset][, length][, encoding])
+.The parameters that are mention in the syntax have their own meaning
+->string:It specifies the string data to be written to buffer.
+->offset:It specifies the index of the buffer to buffer to start writing.Its default value is 0.
+->length:It specifies the number of bytes to write.It defaults to buffer.length.
+->encoding:Encoding to use.'utf8' is the default encoding.
+ 
+Example:buf = new Buffer(256);
+	len = buf.write(" hello well done");
+	console.log("length:"+ len);
+output: lenght:15
+
+Reading a buffer
+.method to read data into buffer is
+syntax:buf.toString([encoding][, start][, end])
+.Parameters of this have their own meaning
+->encoding:It specifies encoding to use. 'utf8 is default encoding.
+->start:It specifies beginning index to start reading, default, default to 0.
+end:It specifies end index to end reading, defaults is complete buffer.
+
+Example:buf =new Buffer(26);
+	for(var i=0;i<26;i++){
+	   buf[i] = i + 97;
+	}
+	console.log(buf.toString('ascii'));
+	console.log(buf.toString('ascii',0,5));
+	console.log(buf.toString('utf8',0,5));
+	console.log(buf.toString(undefined,0,5));
+output: abcdefghijklmnopqrstuvwxyz
+	abcde
+	abcde
+	abcde
+
+2.How to convert buffer to JSON?
+JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner.
+
+EXAMPLE: Buffer
+let bufferOne = Buffer.from('this is code.');
+console.log(bufferOne);
+let json = JSON.stringify(bufferOne);
+console.log(json);
+output:<Buffer 74 68 69 73 20 73 20 63 6f 64 65 2e>
+	{"type":"Buffer","data":[84,104,105,115,32,105,115,32,99,111,100,101,46]}
+
+Here JSON specifies that the object being transformed is a buffer and its data.
+
+3.NPM packages?
+NPM-Node Package Manager.
+NPM is a package manager for Node.js packages, or modules.
+The NPM program is installed on your computer when you install Node.js.
+A package in Node.js contains all the files you need for a module.
+Downloading a package is very easy.
+Open the command line interface and tell NPM to download the package you want.
+I want to download a package called "upper-case"
+syntax:npm install upper-case.
+.Packages in NPM are 
+React,Pro-types,Moments,Express,Request,Lodash,Async,Chalk,Commander,Debug.
+colors,jquery,minimist,
+@types/node,@babel/runtime,
+aws-sdk,js-yaml,ora,
+@angular/core.
+
+
+
+
+
+
+	
+
+ 
